@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Registration Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Complaint Registration Portal</h1>
+    </header>
+    <main>
+        <section id="registration">
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="complaintSubmission">
+            <h2>Submit a Complaint</h2>
+            <form id="complaintForm">
+                <label for="title">Complaint Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="service">Service</option>
+                    <option value="product">Product</option>
+                    <option value="billing">Billing</option>
+                </select>
+                
+                <label for="attachment">Attachment:</label>
+                <input type="file" id="attachment" name="attachment">
+                
+                <button type="submit">Submit Complaint</button>
+            </form>
+        </section>
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <table id="complaintsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Complaints will be listed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
